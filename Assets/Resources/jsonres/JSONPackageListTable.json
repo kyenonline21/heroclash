@@ -1,0 +1,14 @@
+[
+{"PackageID":1,"PrefabID":"package_1_NewUser"},
+{"PackageID":2,"PrefabID":"package_2_EpicCard"},
+{"PackageID":3,"PrefabID":"package_3_LegendCard"},
+{"PackageID":4,"PrefabID":"package_4_SpiderPack"},
+{"PackageID":5,"PrefabID":"package_5_WrestlerPack"},
+{"PackageID":6,"PrefabID":"package_6_RobotPack"},
+{"PackageID":7,"PrefabID":"package_7_LegendPack1"},
+{"PackageID":8,"PrefabID":"package_8_LegendPack2"},
+{"PackageID":9,"PrefabID":"package_9_King1Dia80_popup"},
+{"PackageID":10,"PrefabID":"package_10_King1Dia170_popup"},
+{"PackageID":11,"PrefabID":"package_11_King1Dia350_popup"},
+{"PackageID":12,"PrefabID":"package_12_King1Dia700_popup"}
+]

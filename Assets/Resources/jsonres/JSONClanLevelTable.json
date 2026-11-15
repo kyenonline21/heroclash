@@ -1,0 +1,9 @@
+[
+{"ClanLevel":1,"MaxMember":20,"DonationCondition":0,"ClanChestOpen":1100,"ClanChestID":306001},
+{"ClanLevel":2,"MaxMember":25,"DonationCondition":3500,"ClanChestOpen":2200,"ClanChestID":306002},
+{"ClanLevel":3,"MaxMember":30,"DonationCondition":5000,"ClanChestOpen":3300,"ClanChestID":306003},
+{"ClanLevel":4,"MaxMember":35,"DonationCondition":7000,"ClanChestOpen":4400,"ClanChestID":306004},
+{"ClanLevel":5,"MaxMember":40,"DonationCondition":10000,"ClanChestOpen":5500,"ClanChestID":306005},
+{"ClanLevel":6,"MaxMember":45,"DonationCondition":15000,"ClanChestOpen":6600,"ClanChestID":306006},
+{"ClanLevel":7,"MaxMember":50,"DonationCondition":30000,"ClanChestOpen":7700,"ClanChestID":306007}
+]

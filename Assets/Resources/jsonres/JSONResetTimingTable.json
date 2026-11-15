@@ -1,0 +1,7 @@
+[
+{"Seq":1,"ResetType":2,"StartDay":1,"StartTime":"000000","EndDay":7,"EndTime":"235959"},
+{"Seq":2,"ResetType":2,"StartDay":1,"StartTime":"000000","EndDay":7,"EndTime":"235959"},
+{"Seq":3,"ResetType":2,"StartDay":1,"StartTime":"000000","EndDay":7,"EndTime":"235959"},
+{"Seq":4,"ResetType":1,"StartDay":0,"StartTime":"000000","EndDay":0,"EndTime":"235959"},
+{"Seq":5,"ResetType":2,"StartDay":1,"StartTime":"000000","EndDay":7,"EndTime":"235959"}
+]

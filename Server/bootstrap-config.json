@@ -1,0 +1,43 @@
+{
+  "api": "http://127.0.0.1:38500/mph",
+  "host": "127.0.0.1",
+  "port": "38800",
+  "version": "1.1.4",
+  "moregame_turn": "-1",
+  "interad_turn": "-1",
+  "review_turn": "-1",
+  "coupon": "0",
+  "maintenance": {
+    "onoff": "0",
+    "start_day": "",
+    "end_day": ""
+  },
+  "tabledata": {
+    "BattleModeTable": 1,
+    "BulletTypeTable": 1,
+    "ChestCharacterRateTable": 1,
+    "CharacterTable": 1,
+    "CharacterUpgradeTable": 1,
+    "CommonTable": 3,
+    "ChestTable": 4,
+    "ClanAttendRewardTable": 3,
+    "ClanLevelTable": 1,
+    "EventRewardTable": 1,
+    "EventTable": 1,
+    "IngameRewardTable": 1,
+    "LeagueRewardTable": 1,
+    "LeagueTable": 1,
+    "PackageItemTable": 1,
+    "PackageListTable": 1,
+    "PostMessageTable": 1,
+    "QuestTable": 1,
+    "QuestRewardTable": 3,
+    "RandomNicknameTable": 1,
+    "ShopTable": 1,
+    "ShotTypeTable": 1,
+    "TipMessageTable": 1,
+    "UserLevelTable": 3,
+    "ResetTimingTable": 1,
+    "StringTable": 1
+  }
+}

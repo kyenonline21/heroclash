@@ -1,0 +1,15 @@
+{
+  "products": [
+    { "shopId": 410001, "offerToken": "heropocket.diamonds30", "storeId": "" },
+    { "shopId": 410002, "offerToken": "heropocket.diamonds80", "storeId": "" },
+    { "shopId": 410003, "offerToken": "heropocket.diamonds170", "storeId": "" },
+    { "shopId": 410004, "offerToken": "heropocket.diamonds350", "storeId": "" },
+    { "shopId": 410005, "offerToken": "heropocket.diamonds900", "storeId": "" },
+    { "shopId": 410006, "offerToken": "heropocket.diamonds1850", "storeId": "" }
+  ],
+  "vungleAppId": "",
+  "chestTimePlacement": "",
+  "battleDoublePlacement": "",
+  "privacyConfigured": false,
+  "childDirected": false
+}

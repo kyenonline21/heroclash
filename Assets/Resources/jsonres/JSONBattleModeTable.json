@@ -1,0 +1,6 @@
+[
+{"ModeID":1,"NameNotUse":"보석쟁탈전","ModeName":18000001,"ModeDescription":18010001,"BonusGold":50,"CriteriaTime":"040000","BonusGoldResetTerm":12,"EntryFeeType":0,"EntryFee":0,"EntryMemberCount":6,"PlayTimeType":1,"PlayTime":180,"ModeImage":"image_mode_jb02"},
+{"ModeID":2,"NameNotUse":"방어전","ModeName":18000002,"ModeDescription":18010002,"BonusGold":50,"CriteriaTime":"080000","BonusGoldResetTerm":12,"EntryFeeType":0,"EntryFee":0,"EntryMemberCount":6,"PlayTimeType":1,"PlayTime":300,"ModeImage":"image_mode_db03"},
+{"ModeID":3,"NameNotUse":"배틀로얄","ModeName":18000003,"ModeDescription":18010003,"BonusGold":30,"CriteriaTime":"000000","BonusGoldResetTerm":12,"EntryFeeType":6,"EntryFee":1,"EntryMemberCount":8,"PlayTimeType":1,"PlayTime":150,"ModeImage":"image_mode_br01"},
+{"ModeID":4,"NameNotUse":"보스전","ModeName":18000004,"ModeDescription":18010004,"BonusGold":40,"CriteriaTime":"000000","BonusGoldResetTerm":12,"EntryFeeType":6,"EntryFee":1,"EntryMemberCount":6,"PlayTimeType":2,"PlayTime":300,"ModeImage":"none"}
+]

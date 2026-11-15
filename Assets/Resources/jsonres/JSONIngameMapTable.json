@@ -1,0 +1,11 @@
+[
+{"ModeID":1,"MapID":0,"IsActive":1,"PrefabID":"Map_JB_01"},
+{"ModeID":1,"MapID":1,"IsActive":1,"PrefabID":"Map_JB_02"},
+{"ModeID":1,"MapID":2,"IsActive":1,"PrefabID":"Map_JB_03"},
+{"ModeID":2,"MapID":0,"IsActive":1,"PrefabID":"Map_DB_01"},
+{"ModeID":2,"MapID":1,"IsActive":1,"PrefabID":"Map_DB_02"},
+{"ModeID":2,"MapID":2,"IsActive":1,"PrefabID":"Map_DB_03"},
+{"ModeID":3,"MapID":0,"IsActive":1,"PrefabID":"Map_BR_01"},
+{"ModeID":3,"MapID":1,"IsActive":1,"PrefabID":"Map_BR_02"},
+{"ModeID":3,"MapID":2,"IsActive":1,"PrefabID":"Map_BR_03"}
+]

@@ -1,0 +1,43 @@
+# Unity generated files
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Hh]eroClash_BackUpThisFolder_ButDontShipItWithYourGame/
+
+# Unity-generated IDE files
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Local packages and build outputs
+*.apk
+*.aab
+.DS_Store
+
+# Local server state and secrets
+/Server/data/
+.env
+.env.*
+/Server/.env
+/Server/.env.*
+
+# Amazon tester data and signing credentials
+/amazon.sdktester.json
+*.keystore
+*.jks
+*.p12
+*.pem

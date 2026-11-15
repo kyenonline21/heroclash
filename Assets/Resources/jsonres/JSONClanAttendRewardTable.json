@@ -1,0 +1,12 @@
+[
+{"AttendMember":5,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":1},
+{"AttendMember":10,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":2},
+{"AttendMember":15,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":3},
+{"AttendMember":20,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":4},
+{"AttendMember":25,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":5},
+{"AttendMember":30,"RewardItemType":6,"RewardItemID":0,"RewardItemCount":1},
+{"AttendMember":35,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":10},
+{"AttendMember":40,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":15},
+{"AttendMember":45,"RewardItemType":5,"RewardItemID":0,"RewardItemCount":20},
+{"AttendMember":50,"RewardItemType":3,"RewardItemID":308001,"RewardItemCount":1}
+]
