@@ -28,6 +28,7 @@ function createAmazonStore({ env = process.env, fetchImpl = fetch } = {}) {
                 throw new StoreServiceError('Amazon receipt verification is unavailable. Retry this purchase.');
             }
             if (!response.ok) {
+                console.warn(`Amazon RVS verification failed: httpStatus=${response.status} receiptHasSlash=${receiptId.includes('/')}`);
                 throw new StoreServiceError(`Amazon rejected the receipt (HTTP ${response.status}).`);
             }
             let receipt;

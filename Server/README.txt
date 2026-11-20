@@ -956,6 +956,9 @@ production purchases, use AMAZON_IAP_RVS_MODE=production (the default) and the
 real Amazon shared key. The server checks the verified SKU/type and cancel
 state, then grants the table-defined jewel amount once per receipt.
 The client calls Amazon notifyFulfillment(FULFILLED) only after that grant.
+For RVS HTTP rejections, check the backend log for
+`Amazon RVS verification failed`. It reports the HTTP status and whether the
+receipt ID contains a slash, without exposing the request URL or identifiers.
 If the server is unreachable, the receipt remains unfulfilled and is retried
 through Amazon Purchase Updates when the shop is reopened. Never put the
 shared secret in Unity resources, source control, logs or chat.

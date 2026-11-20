@@ -136,6 +136,23 @@ test('Amazon RVS adapter keeps its shared secret server-side and rejects invalid
   assert.doesNotMatch(requestedUrl, /\/sandbox\//);
 });
 
+test('Amazon RVS logs HTTP rejections without logging credentials or receipt data', async (t) => {
+  const warn = t.mock.method(console, 'warn', () => {});
+  const store = createAmazonStore({
+    env: { AMAZON_IAP_SHARED_SECRET: 'server-only-secret' },
+    fetchImpl: async () => new Response('upstream response body', { status: 404 }),
+  });
+  for (const receiptId of ['test/receipt', 'test-receipt']) {
+    await assert.rejects(store.verifyReceipt(receiptId, 'tester-user'), {
+      message: 'Amazon rejected the receipt (HTTP 404).',
+    });
+  }
+  assert.deepEqual(warn.mock.calls.map(call => call.arguments), [
+    ['Amazon RVS verification failed: httpStatus=404 receiptHasSlash=true'],
+    ['Amazon RVS verification failed: httpStatus=404 receiptHasSlash=false'],
+  ]);
+});
+
 test('Amazon App Tester receipts use RVS Cloud Sandbox with the Appstore user ID', async () => {
   let requestedUrl;
   const store = createAmazonStore({
