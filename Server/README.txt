@@ -949,12 +949,28 @@ same SKUs as ShopTable (heroes.dia1.aos through heroes.dia6.aos). Configure
 the app's Amazon shared secret only on the Node host:
    AMAZON_IAP_SHARED_SECRET
 The Android client sends receipt ID, SKU and shop ID to amazon_purchase.
-It also sends the Appstore user ID returned by getUserData. Set
-AMAZON_IAP_RVS_MODE=sandbox while testing with Amazon App Tester; this routes
-verification through RVS Cloud Sandbox, which requires that user ID. For
-production purchases, use AMAZON_IAP_RVS_MODE=production (the default) and the
-real Amazon shared key. The server checks the verified SKU/type and cancel
-state, then grants the table-defined jewel amount once per receipt.
+It also sends the Appstore user ID returned by getUserData. Both production
+and sandbox RVS require that user ID. Set AMAZON_IAP_RVS_MODE=sandbox while
+testing with Amazon App Tester. From the project root on a test host, add
+--env-file=Server/amazon-sandbox.env to the existing Node startup command:
+   node --env-file=Server/amazon-sandbox.env Server/bootstrap-server.cjs
+Keep the existing HOST, PORT and PUBLIC_API_URL settings for the test host.
+Already-set environment variables take precedence over this file, so remove
+or update conflicting Amazon IAP settings in the test service before restarting.
+Never load this file on a production server or store a real Shared Key in it.
+Production uses the same verifyReceiptId path without the /sandbox segment.
+For Live App Testing (LAT) and Appstore release builds, deploy the updated
+server and use production RVS. On a systemd host, create a private env file
+(for example /etc/heropocket-iap.env, owned by root with mode 0600) containing:
+   AMAZON_IAP_RVS_MODE=production
+   AMAZON_IAP_SHARED_SECRET=<real Shared Key from Amazon Developer Console>
+In the existing service drop-in, replace the sandbox EnvironmentFile line
+with EnvironmentFile=/etc/heropocket-iap.env and restart the service. Check
+that the APK points to the HTTPS API served by that instance. Keep the
+production env file out of Git and keep App Tester on a separate sandbox
+service if both are needed at once.
+The server checks the verified SKU/type and cancel state, then grants the
+table-defined jewel amount once per receipt.
 The client calls Amazon notifyFulfillment(FULFILLED) only after that grant.
 For RVS HTTP rejections, check the backend log for
 `Amazon RVS verification failed`. It reports the HTTP status and whether the

@@ -126,13 +126,14 @@ test('Amazon RVS adapter keeps its shared secret server-side and rejects invalid
     env: { AMAZON_IAP_SHARED_SECRET: 'server-only-secret' },
     async fetchImpl(url) {
       requestedUrl = url;
-      return { ok: true, async json() { return { receiptId: 'receipt-1' }; } };
+      return { ok: true, async json() { return { receiptId: 'receipt/1' }; } };
     },
   });
   assert.equal(store.configured, true);
-  assert.deepEqual(await store.verifyReceipt('receipt-1'), { receiptId: 'receipt-1' });
+  await assert.rejects(store.verifyReceipt('receipt-1'), /requires an Appstore user ID/);
+  assert.deepEqual(await store.verifyReceipt('receipt/1', 'user/1'), { receiptId: 'receipt/1' });
   assert.match(requestedUrl, /server-only-secret/);
-  assert.match(requestedUrl, /appstore-sdk\.amazon\.com\/version\/1\.0\/verifyReceiptId/);
+  assert.match(requestedUrl, /appstore-sdk\.amazon\.com\/version\/1\.0\/verifyReceiptId\/developer\/server-only-secret\/user\/user%2F1\/receiptId\/receipt%2F1$/);
   assert.doesNotMatch(requestedUrl, /\/sandbox\//);
 });
 

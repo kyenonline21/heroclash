@@ -12,15 +12,11 @@ function createAmazonStore({ env = process.env, fetchImpl = fetch } = {}) {
             if (!sharedSecret) {
                 throw new StoreServiceError('Amazon IAP receipt verification is not configured.');
             }
-            let url;
-            if (rvsMode === 'sandbox') {
-                if (!userId) {
-                    throw new StoreServiceError('Amazon sandbox receipt verification requires an Appstore user ID.');
-                }
-                url = `https://appstore-sdk.amazon.com/sandbox/version/1.0/verifyReceiptId/developer/${encodeURIComponent(sharedSecret)}/user/${encodeURIComponent(userId)}/receiptId/${encodeURIComponent(receiptId)}`;
-            } else {
-                url = `https://appstore-sdk.amazon.com/version/1.0/verifyReceiptId/${encodeURIComponent(sharedSecret)}/${encodeURIComponent(receiptId)}`;
+            if (!userId) {
+                throw new StoreServiceError('Amazon receipt verification requires an Appstore user ID.');
             }
+            const environmentPath = rvsMode === 'sandbox' ? '/sandbox' : '';
+            const url = `https://appstore-sdk.amazon.com${environmentPath}/version/1.0/verifyReceiptId/developer/${encodeURIComponent(sharedSecret)}/user/${encodeURIComponent(userId)}/receiptId/${encodeURIComponent(receiptId)}`;
             let response;
             try {
                 response = await fetchImpl(url, { signal: AbortSignal.timeout(10000) });
